@@ -11,7 +11,7 @@ function buildTable(data) {
         let row = tbody.append("tr")
 
         Object.values(dataRow).forEach((val) => {
-            let cell = row.append(td);
+            let cell = row.append("td");
             cell.text(val);
         });
     });
@@ -19,16 +19,16 @@ function buildTable(data) {
 
 function handleClick() {
     //search for datetime id in html tags and extract the value
-    let date = d3.select("#datetime").property("value")
+    let date = d3.select("#datetime").property("value");
     let filteredData = tableData;
-    
+
     if (date) {
         filteredData = filteredData.filter(row => row.datetime === date);
-    }
+    };
 
     buildTable(filteredData);
-}
+};
 
-d3.selectAll("filter-btn").on("click", handleClick);
+d3.selectAll("#filter-btn").on("click", handleClick);
 
 buildTable(tableData);
