@@ -41,15 +41,33 @@
                     <form class="bg-dark">
                         <p>Filter Search</p>
                     </form>
-                    <ul class="list-group bg-dark">
+                    <ul class="list-group bg-dark" id='filter-input'>
                         <li class="list-group-item bg-dark">
-                            <label for="date">Enter Date</label>
+                            <label for="date">Date</label>
                             <input type="text" placeholder="1/10/2010" id="datetime">
                         </li>
                         <li class="list-group-item bg-dark">
-                            <!--button type implies no action taken in HTML -- handled by JS-->
+                            <label for="city">City</label>
+                            <input type="text" id="city">
+                        </li>
+                        <li class="list-group-item bg-dark">
+                            <label for="state">State</label>
+                            <input type="text" id="state">
+                        </li>
+                        <li class="list-group-item bg-dark">
+                            <label for="country">Country</label>
+                            <input type="text" id="country">
+                        </li>
+                        <li class="list-group-item bg-dark">
+                            <label for="shape">Shape</label>
+                            <input type="text" id="shape">
+                        </li>
+                        <!--
+                        <li class="list-group-item bg-dark">
+                            <button type implies no action taken in HTML -- handled by JS>
                             <button id="filter-btn" type="button" class="btn btn-default">Filter Table</button>
                         </li>
+                        -->
                     </ul>
                 </div>
                 <div class="col-md-9">
